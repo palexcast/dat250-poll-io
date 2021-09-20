@@ -55,7 +55,7 @@ public class PopulateDB {
         poll2.setName("Which is your favorite?");
         poll2.setDescription("To find out which tree should I sit under.");
         poll2.setPublicPoll(true);
-        poll2.setPublicId("FB42");
+        poll2.setPublicId("FB40");
         calendar.set(2020 + 1900, Calendar.MARCH, 10);
         poll2.setStartDate(new Date(calendar.getTimeInMillis()));
         calendar.set(2020 + 1900, Calendar.JULY, 10);
