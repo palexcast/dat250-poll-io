@@ -6,7 +6,7 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.UUID;
 
-@Entity(name = "Webhooks")
+@Entity(name = "POLL_WEBHOOK")
 @Data
 @ToString
 public class WebhookEntity {
@@ -22,5 +22,6 @@ public class WebhookEntity {
     private Boolean onPollStart;
     private Boolean onPollEnd;
     @ManyToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "POLL_ID")
     private PollEntity poll;
 }
