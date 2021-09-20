@@ -52,38 +52,43 @@ public class PopulateDB {
         poll1.setOptions(createPoll1Options());
 
         PollEntity poll2 = new PollEntity();
-        poll1.setName("Which is your favorite?");
-        poll1.setDescription("To find out which tree should I sit under.");
-        poll1.setPublicPoll(true);
-        poll1.setPublicId("FB42");
+        poll2.setName("Which is your favorite?");
+        poll2.setDescription("To find out which tree should I sit under.");
+        poll2.setPublicPoll(true);
+        poll2.setPublicId("FB42");
         calendar.set(2020 + 1900, Calendar.MARCH, 10);
         poll2.setStartDate(new Date(calendar.getTimeInMillis()));
         calendar.set(2020 + 1900, Calendar.JULY, 10);
         poll2.setEndDate(new Date(calendar.getTimeInMillis()));
-        poll1.setOptions(createPoll2Options());
+        poll2.setOptions(createPoll2Options());
 
         return Arrays.asList(poll1, poll2);
     }
 
     private static List<PollOptionEntity> createPoll1Options() {
         PollOptionEntity option1 = new PollOptionEntity();
+        option1.setOptionId(0);
         option1.setValue("Top hat");
 
         PollOptionEntity option2 = new PollOptionEntity();
-        option1.setValue("Fedora");
+        option2.setOptionId(1);
+        option2.setValue("Fedora");
 
         return Arrays.asList(option1, option2);
     }
 
     private static List<PollOptionEntity> createPoll2Options() {
         PollOptionEntity option1 = new PollOptionEntity();
+        option1.setOptionId(0);
         option1.setValue("Apple");
 
         PollOptionEntity option2 = new PollOptionEntity();
-        option1.setValue("Orange");
+        option2.setOptionId(1);
+        option2.setValue("Orange");
 
         PollOptionEntity option3 = new PollOptionEntity();
-        option1.setValue("Banana");
+        option3.setOptionId(2);
+        option3.setValue("Banana");
 
         return Arrays.asList(option1, option2, option3);
     }

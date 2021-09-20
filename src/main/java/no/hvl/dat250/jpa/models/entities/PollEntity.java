@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Entity(name = "Polls")
+@Entity(name = "POLL")
 @Data
 @ToString
 public class PollEntity {
@@ -26,5 +26,6 @@ public class PollEntity {
     private boolean publicPoll;
     private String publicId;
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "POLL_ID")
     private List<PollOptionEntity> options = new ArrayList<>();
 }
